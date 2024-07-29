@@ -1,4 +1,4 @@
-package com.phonepe.contactsync.domain.model
+package com.example.contactsync.domain.model
 
 import java.net.URI
 

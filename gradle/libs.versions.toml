@@ -9,8 +9,8 @@ lifecycleRuntimeKtx = "2.8.3"
 activityCompose = "1.9.0"
 composeBom = "2023.08.00"
 roomCompiler = "2.6.1"
-dagger = "2.44"
-hilt = "2.44"
+dagger = "2.48"
+hilt = "2.48"
 appcompat = "1.7.0"
 constraintlayout = "2.1.4"
 
@@ -31,6 +31,7 @@ androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "roomCompiler" }
 androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "roomCompiler" }
+androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "roomCompiler" }
 dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = "dagger" }
 dagger-runtime = { module = "com.google.dagger:dagger", version.ref = "dagger" }
 hilt-runtime = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
@@ -39,6 +40,7 @@ androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 mockito = { group = "org.mockito", name = "mockito-core", version = "3.12.4" }
 mockito-kotlin = { group = "org.mockito.kotlin", name = "mockito-kotlin", version = "3.2.0" }
+mockk = { module = "io.mockk:mockk", version = "1.13.1" }
 core-test = { group = "androidx.arch.core", name = "core-testing", version = "2.1.0" }
 coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version = "1.6.4" }
 
@@ -46,4 +48,5 @@ coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 jetbrains-kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 

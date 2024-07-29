@@ -1,9 +1,9 @@
-package com.phonepe.contactsync.data.device
+package com.example.contactsync.data.device
 
 import android.content.ContentResolver
 import android.database.Cursor
 import android.provider.ContactsContract
-import com.phonepe.contactsync.domain.model.DeviceContact
+import com.example.contactsync.domain.model.DeviceContact
 import java.net.URI
 import javax.inject.Inject
 

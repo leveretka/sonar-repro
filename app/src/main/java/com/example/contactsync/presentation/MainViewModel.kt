@@ -1,10 +1,10 @@
-package com.phonepe.contactsync.presentation
+package com.example.contactsync.presentation
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.phonepe.contactsync.domain.usecase.SyncContactsUseCase
+import com.example.contactsync.domain.usecase.SyncContactsUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

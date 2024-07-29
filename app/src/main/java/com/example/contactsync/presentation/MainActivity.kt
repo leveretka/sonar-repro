@@ -2,9 +2,9 @@ import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import com.phonepe.contactsync.presentation.MainViewModel
-import com.phonepe.contactsync.presentation.SyncStatus
-import com.phonepe.sdks.contactsync.databinding.ActivityMainBinding
+import com.example.contactsync.presentation.MainViewModel
+import com.example.contactsync.presentation.SyncStatus
+import com.example.sdks.contactsync.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

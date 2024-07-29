@@ -1,6 +1,6 @@
-package com.phonepe.contactsync.data.remote
+package com.example.contactsync.data.remote
 
-import com.phonepe.contactsync.domain.model.DeviceContact
+import com.example.contactsync.domain.model.DeviceContact
 import kotlinx.coroutines.delay
 import javax.inject.Inject
 

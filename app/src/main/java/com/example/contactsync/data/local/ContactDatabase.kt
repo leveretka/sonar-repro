@@ -1,4 +1,4 @@
-package com.phonepe.contactsync.data.local
+package com.example.contactsync.data.local
 
 import android.content.Context
 import androidx.room.Database

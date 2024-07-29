@@ -1,4 +1,4 @@
-package com.phonepe.contactsync.domain.usecase
+package com.example.contactsync.domain.usecase
 
 import javax.inject.Inject
 

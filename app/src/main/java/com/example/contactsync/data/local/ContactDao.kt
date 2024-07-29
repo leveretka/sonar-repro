@@ -1,4 +1,4 @@
-package com.phonepe.contactsync.data.local
+package com.example.contactsync.data.local
 
 import androidx.room.Dao
 import androidx.room.Delete

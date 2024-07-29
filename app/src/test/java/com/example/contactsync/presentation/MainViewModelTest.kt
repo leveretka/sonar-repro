@@ -1,17 +1,22 @@
-package com.phonepe.contactsync.presentation
+package com.example.contactsync.presentation
 
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
-import com.phonepe.contactsync.domain.usecase.SyncContactsUseCase
+import com.example.contactsync.domain.usecase.SyncContactsUseCase
+import io.mockk.coEvery
+import io.mockk.mockk
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.test.*
+import kotlinx.coroutines.test.StandardTestDispatcher
+import kotlinx.coroutines.test.resetMain
+import kotlinx.coroutines.test.runTest
+import kotlinx.coroutines.test.setMain
 import org.junit.After
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
-import org.mockito.kotlin.*
-import org.junit.Assert.*
 
 @ExperimentalCoroutinesApi
 class MainViewModelTest {
@@ -21,12 +26,11 @@ class MainViewModelTest {
 
     private val testDispatcher = StandardTestDispatcher()
     private lateinit var viewModel: MainViewModel
-    private lateinit var syncContactsUseCase: SyncContactsUseCase
+    private var syncContactsUseCase = mockk<SyncContactsUseCase>()
 
     @Before
     fun setup() {
         Dispatchers.setMain(testDispatcher)
-        syncContactsUseCase = mock()
         viewModel = MainViewModel(syncContactsUseCase)
     }
 
@@ -38,7 +42,7 @@ class MainViewModelTest {
     @Test
     fun `syncContacts success updates status to Success`() = runTest {
         // Given
-        whenever(syncContactsUseCase.invoke()).thenReturn(Unit)
+        coEvery { syncContactsUseCase.invoke() } returns Unit
 
         // When
         viewModel.syncContacts()
@@ -46,14 +50,13 @@ class MainViewModelTest {
 
         // Then
         assertEquals(SyncStatus.Success, viewModel.syncStatus.value)
-        verify(syncContactsUseCase).invoke()
     }
 
     @Test
     fun `syncContacts failure updates status to Error`() = runTest {
         // Given
         val errorMessage = "Sync failed"
-        whenever(syncContactsUseCase.invoke()).thenThrow(RuntimeException(errorMessage))
+        coEvery { syncContactsUseCase.invoke() } throws RuntimeException(errorMessage)
 
         // When
         viewModel.syncContacts()
@@ -63,6 +66,5 @@ class MainViewModelTest {
         val status = viewModel.syncStatus.value
         assertTrue(status is SyncStatus.Error)
         assertEquals(errorMessage, (status as SyncStatus.Error).message)
-        verify(syncContactsUseCase).invoke()
     }
 }

@@ -1,8 +1,8 @@
-package com.phonepe.contactsync.di
+package com.example.contactsync.di
 
 import android.content.Context
-import com.phonepe.contactsync.data.local.ContactDao
-import com.phonepe.contactsync.data.local.ContactDatabase
+import com.example.contactsync.data.local.ContactDao
+import com.example.contactsync.data.local.ContactDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
