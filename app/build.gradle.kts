@@ -6,13 +6,13 @@ plugins {
 }
 
 android {
-    namespace = "com.example.sdks.contactsync"
+    namespace = "com.example.contactsync"
     compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.contactsync"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 33
         versionCode = 1
         versionName = "1.0"
 
@@ -67,6 +67,8 @@ dependencies {
     implementation(libs.hilt.runtime)
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.material)
+    implementation(libs.androidx.activity)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

@@ -6,7 +6,13 @@ import javax.inject.Inject
 
 class ContactsNetworkBridge @Inject constructor() {
 
-    suspend fun syncContacts(changes: List<DeviceContact>, deleted: List<String>): Boolean {
+    /**
+     * @param changes: List of Device contacts that have been updated
+     * @param deleted_phonenumbers: List of phone numbers that have been deleted
+     */
+    suspend fun syncContacts(
+        changes: List<DeviceContact>, deleted_phonenumbers: List<String>
+    ): Boolean {
         // Stub implementation
         delay(1000) // Simulate network delay
         return true

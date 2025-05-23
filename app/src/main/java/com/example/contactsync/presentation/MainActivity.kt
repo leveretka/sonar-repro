@@ -4,7 +4,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.example.contactsync.presentation.MainViewModel
 import com.example.contactsync.presentation.SyncStatus
-import com.example.sdks.contactsync.databinding.ActivityMainBinding
+import com.example.contactsync.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

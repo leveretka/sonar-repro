@@ -1,5 +1,5 @@
 [versions]
-agp = "8.5.0-alpha05"
+agp = "8.5.2"
 kotlin = "1.9.0"
 coreKtx = "1.13.1"
 junit = "4.13.2"
@@ -13,6 +13,9 @@ dagger = "2.48"
 hilt = "2.48"
 appcompat = "1.7.0"
 constraintlayout = "2.1.4"
+material = "1.12.0"
+activity = "1.9.2"
+sonar = "6.2.0.5505"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -43,10 +46,12 @@ mockito-kotlin = { group = "org.mockito.kotlin", name = "mockito-kotlin", versio
 mockk = { module = "io.mockk:mockk", version = "1.13.1" }
 core-test = { group = "androidx.arch.core", name = "core-testing", version = "2.1.0" }
 coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version = "1.6.4" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 jetbrains-kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
-
+sonar = { id = "org.sonarqube", version.ref = "sonar" }
