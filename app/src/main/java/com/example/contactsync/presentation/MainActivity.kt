@@ -1,3 +1,5 @@
+package com.example.contactsync.presentation
+
 import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
