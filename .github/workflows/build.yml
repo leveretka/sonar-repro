@@ -36,4 +36,4 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ vars.SONAR_HOST_URL }}
-        run: ./gradlew assembleDebug sonar -x :app:validateSigningDebug -x :app:writeDebugSigningConfigVersions
+        run: ./gradlew assembleDebug sonar -x :app:validateSigningDebug -x :app:writeDebugSigningConfigVersions --debug --stacktrace
